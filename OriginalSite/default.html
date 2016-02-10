@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>{{page_title}}</title>
+<meta name="keywords" content="{{meta_keywords}}" />
+<meta name="description" content="{{meta_description}}" />
+{{meta_tags}}
+{{favico}}
+{{shared_assets}}
+<!--[if IE 6]>
+<style type="text/css">
+	#navigation { margin-top: -28px; }
+</style>
+<![endif]-->
+<script type="text/javascript" src="/js/common.js"></script>
+</head>
+<body>
+{{link_admin}}
+<div id="centered">
+	<!-- Header -->
+	<div id="header">		
+		<a href="/" id="logo" title="Agent Owned - Charleston SC Real Estate Agents">
+			<img src="/img/stan-huff_logo.png" border=0 />
+		</a> 
+			<!-- <span id="hdrlinks"><a href="/property-search.html">Stan Huff: Charleston SC Real Estate</a></span>
+		       
+        <span id="topright">• 843-670-2835 •</span> -->
+	</div>
+	<!-- Header -->
+	<div id="navigation">	      
+    		{{element[top_navigation_items=1]}}
+	</div>
+	<!-- Content-->
+	<div id="content">
+		<!-- Left column -->
+		<div id="main">
+			<h1>{{title_for_layout}}</h1>
+			{{content_for_layout}}
+            	
+		</div>
+		<!-- Right column -->
+		<div id="sidebar">
+		  {{column_right}}
+		</div>
+	</div>
+</div>
+<!-- Footer -->
+<div id="footer">
+  <div class="footer-mid">
+	  <div class="ftrlnksctnr-inner">
+	    {{element[charleston_listings=1]}}
+	  </div>    
+      <div align="center" class="ftr-icons">
+       <a href="/blog.rss"><img alt="Subscribe to RSS feed" src="/img/rssicon.png" /></a>
+        <img title="Agent Owned" alt="Agent Owned" src="/img/agentowned-logo.png" />
+        <img title="Accredited Buyer Representative" alt="Accredited Buyer Representative" src="/img/abr-logo.png" />
+        <img title="Equal Housing Opportunity" alt="Equal Housing Opportunity" src="/img/equal_housing_oportunity.png" />
+        <img title="Realtor" alt="Realtor" src="/img/realtor-logo.png" />
+     </div>
+     <div class="div1">
+     <strong>AgentOwned</strong><br />
+     Copyright {{year}} agentowned.com All Rights Reserved
+    </div>
+    <div class="div2">
+      Phone: 843-670-2835<br />
+      <a href="/sitemap.html" title="Sitemap">Sitemap</a> | Powered by <a href="http://www.myrsol.com" target="_blank" title="Powered by Myrsol, LLC. Real Estate Solutions">Myrsol, LLC. Real Estate Solutions</a>
+ <a href="/contact.html" title="Email Us!">Email</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
