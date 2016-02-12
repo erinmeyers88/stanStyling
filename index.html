@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="mystyles.css">
-
+	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 </head>
 
 <body>
@@ -17,11 +17,40 @@
 
 	</header>
 	<nav>
-		<a href="/property-search.html"><div><h4>Property Search</h4></div></a>
-		<a href="about.html"><div><h4>About</h4></div></a>
-		<a href="http://www.agentowned.com/one-stop-shop.html" target="_blank"><div><h4>One Stop Shop</h4></div></a>
-		<a href="/blog.html"><div><h4>Blog</h4></div></a>
-		<a href="/contact.html"><div><h4>Contact</h4></div></a>		
+		<div class="menuLogo"><i class="fa fa-bars fa-2x"></i></div>
+		
+		<a href="/login.html" class="loginMobile">
+			<div>
+				<h4 class="navText">Login/Profile</h4></div>
+		</a>
+		<hr class="navHr">
+		<a href="/property-search.html" class="navDiv">
+			<div>
+				<h4 class="navText">Property Search</h4></div>
+		</a>
+		<hr class="navHr">
+		<a href="about.html" class="navDiv">
+			<div>
+				<h4 class="navText">About</h4></div>
+		</a>
+		<hr class="navHr">
+		<a href="http://www.agentowned.com/one-stop-shop.html" target="_blank" class="navDiv">
+			<div>
+				<h4 class="navText">One Stop Shop</h4></div>
+		</a>
+		<hr class="navHr">
+		<a href="/blog.html" class="navDiv">
+			<div>
+				<h4 class="navText">Blog</h4></div>
+		</a>
+		<hr class="navHr">
+		<a href="/contact.html" class="navDiv">
+			<div>
+				<h4 class="navText">Contact</h4></div>
+		</a>
+		
+		
+		
 	</nav>
 	<content>
 		<div class="homeTop">
@@ -37,11 +66,40 @@
 		</div>
 		<div class="homeMiddle">
 			<div class="highlight">
+				<i class="fa fa-search fa-3x"></i>
 				<h2>Quick Search</h2>
+				<div class="pStandard">
+					<p>Lorem ipsum dolor sit amet, nec feugiat volutpat mollis sed aut, ipsum eget fusce hac, eget dictum ut. Tempor morbi,
+						sit eu vestibulum curae culpa sapien mollis.</p>
+				</div>
+				<div class="highlightLogo">
+					<div class="quickSearchButton">
+						<h4>Search Now</h4></div>
+				</div>
+			</div>
+			<hr>
+			<div class="highlight">
+				<i class="fa fa-check fa-3x"></i>
+				<h2>One Stop Shop</h2>
+				<div class="pStandard">
+					<p>Lorem ipsum dolor sit amet, nec feugiat volutpat mollis sed aut, ipsum eget fusce hac, eget dictum ut. Tempor morbi,
+						sit eu vestibulum curae culpa sapien mollis.</p>
+				</div>
+				<div class="highlightLogo"><img src="agentOwnedLogo.png" alt=""></div>
+			</div>
+			<hr>
+			<div class="highlight">
+				<i class="fa fa-search fa-3x"></i>
+				<h2>Quick Search</h2>
+				<div class="pStandard">
+					<p>Lorem ipsum dolor sit amet, nec feugiat volutpat mollis sed aut, ipsum eget fusce hac, eget dictum ut. Tempor morbi,
+						sit eu vestibulum curae culpa sapien mollis.</p>
+				</div>
+				<div class="highlightLogo"><img src="agentOwnedLogo.png" alt=""></div>
 			</div>
 		</div>
-		
-		
+
+
 	</content>
 	<footer>
 		<div class="footerIcons">
@@ -53,5 +111,59 @@
 		</div>
 	</footer>
 </body>
+
+<script>
+	$(".menuLogo").click(function () {
+		
+		var menuShowing = document.getElementsByClassName("login");
+		
+		 if (menuShowing[0].style.display !== "block") {
+				$("nav").css({
+				"flex-direction": "column",
+				"justify-content": "space-around",
+				"height": "260px",
+				"padding": "15px",
+				});
+				$(".navHr").css({
+				"display": "block",
+				"width": "100%"
+				});
+				$(".navDiv").css({
+				"display": "flex"
+				});
+				$(".loginMobile").css({
+				"display": "flex"
+				});  
+				$(".navText").css({
+				"font-size": "16px",
+				}); 
+		 } else {
+			 
+			 
+		 }
+		//  } else {
+		// 	 $("nav").css({
+		// 		"flex-direction": "row",
+		// 		"justify-content": "flex-end",
+		// 		"height": "60px",
+		// 		"padding": "15px",
+		// 		});
+		// 		$(".navDiv").css({
+		// 		"display": "none",
+		// 		});  
+		// 		$(".navHr").css({
+		// 		"display": "none",
+		// 		});
+		// 		$(".loginMobile").css({
+		// 		"display": "none",
+		// 		});  
+		//  }
+		
+		
+		
+		
+	});
+
+</script>
 
 </html>
