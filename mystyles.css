@@ -94,6 +94,27 @@ nav div {
 }
 
 
+.mobileNav {
+	color: white;
+	background-color: #332859;
+	padding: 3px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	z-index: 500;
+}
+
+.mobileNav div {
+	display: flex;
+	flex-direction: row;
+	padding: 5px;
+}
+
+.mobileNav hr {
+	width: 95%;
+}
+
 .loginMobile {
 	display: none;
 }
@@ -107,6 +128,10 @@ nav div {
 
 .menuLogo i {
 	margin: 0;
+}
+
+.mobileNav {
+	display: none;
 }
 
 .content {
@@ -160,6 +185,7 @@ nav div {
 	align-items: center;
 	background-color: #F28324;
 	cursor: pointer;
+	padding: 5px;
 }
 
 .featuredPropButton:hover {
@@ -277,6 +303,12 @@ footer {
 /*Media queries*/
 
 
+@media (min-width: 560px) {
+	.mobileNav {
+		display: none !important;
+	}
+}
+
 @media (max-width: 954px) {
 	
 	.homeMiddle {
@@ -288,7 +320,7 @@ footer {
 		flex-direction: column;
 		align-items: center;
 		justify-content: flex-start;
-		width: 65%;
+		width: 65%;	
 	}
 	
 	.homeMiddle hr {
@@ -306,6 +338,7 @@ footer {
 	
 	h2 {
 		font-size: 25px;
+		text-align: center;
 	}
 	
 	h3 {
@@ -314,6 +347,16 @@ footer {
 	
 	h4 {
 		font-size: 16px;
+	}
+	
+	.homeTop {
+		justify-content: center;
+	}
+	
+	.topRight {
+		margin-right: 0;
+		height: 70%;
+		width: 70%;
 	}
 	
 }
@@ -341,16 +384,17 @@ footer {
 	}
 	
 	nav {
-		height: 60px;
+		height: 50px;
 		justify-content: flex-end;
 		align-items: center;
 		padding:15px;
 	}
 	
+	.phoneNum {
+		display: none;
+	}
 	.menuLogo {
 		display: flex;
-		align-self: flex-end;
-		/*margin: 5px;*/
 	}
 	
 	.navDiv {
@@ -361,4 +405,31 @@ footer {
 		display: none;
 	}
 
+}
+
+
+@media (max-width: 460px) {
+	
+	h1 {
+		font-size: 25px;
+	}
+	
+	h2 {
+		font-size: 25px;
+	}
+	
+	h3 {
+		font-size: 16px;
+	}
+	
+	h4 {
+		font-size: 16px;
+	}
+	
+	.quickSearchButton {
+	height: 45px;
+	margin: 5px;
+	width: 120px;
+}
+	
 }
