@@ -278,7 +278,8 @@ footer {
 	flex-direction: row;
 	justify-content: space-around;
 	align-items: center;
-	margin: 30px;
+	margin-top: 50px;
+	margin-bottom: 50px;
 }
 
 .aboutPerson {
@@ -286,19 +287,62 @@ footer {
 	flex-direction: column;
 	align-content: center;
 	align-items: center;
-	width: 40%;
+	width: 50%;
 }
 
-.aboutPerson img {
-	height: 200px;
-	width: 165px;
+.aboutPersonTop {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 85%;
+}
+
+.aboutPerson hr {
+	width: 85%;
+	margin-top: 30px;
 	margin-bottom: 30px;
 }
 
-.aboutPerson p {
+.nameAndAwards {
 	width: 60%;
+	height: 100%;
+}
+.nameAndAwards ul {
+	padding-left: 1em;
+	margin: 0;
+	
 }
 
+ul li {
+	/*text-indent: -1em;*/
+	margin-top: 12px;
+}
+
+.headshot {
+	height: 200px;
+	width: 165px;
+}
+
+.aboutPerson p {
+	width: 70%;
+	line-height: 30px;
+	margin-bottom: 20px;
+	text-indent: 30px;
+	text-align: justify;
+}
+
+.personalPics {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 65%;
+}
+
+.personalPics img {
+	height: 150px;
+	margin-bottom: 30px;
+	
+}
 
 /*Media queries*/
 
@@ -310,6 +354,10 @@ footer {
 }
 
 @media (max-width: 954px) {
+	
+	.homeTop {
+		justify-content: center;
+	}
 	
 	.homeMiddle {
 		flex-direction: column;
@@ -328,9 +376,11 @@ footer {
 		width: 100%;
 		margin-bottom: 50px;
 	}
+	
+	
 }
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
 	
 	h1 {
 		font-size: 40px;
@@ -350,7 +400,7 @@ footer {
 	}
 	
 	.homeTop {
-		justify-content: center;
+		height: 450px;
 	}
 	
 	.topRight {
@@ -377,6 +427,10 @@ footer {
 	
 	h4 {
 		font-size: 16px;
+	}
+	
+	.homeTop {
+		height: 425px;
 	}
 	
 	.login {
@@ -430,6 +484,9 @@ footer {
 	height: 45px;
 	margin: 5px;
 	width: 120px;
-}
-	
+	}
+
+	.homeTop {
+		height: 375px;
+	}	
 }
