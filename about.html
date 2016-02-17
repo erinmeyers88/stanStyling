@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="mystyles.css">
-
+	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 </head>
 
 <body>
@@ -18,17 +18,69 @@
 
 	</header>
 	<nav>
-		<div>
-			<h3>Test</h3><i class="fa fa-chevron-down"></i></div>
+		<div class="menuLogo"><i class="fa fa-bars fa-2x"></i></div>
+		
+		<a href="/property-search.html" class="navDiv">
+			<div>
+				<h4 class="navText">Property Search</h4></div>
+		</a>
+		<hr class="navHr">
+		<a href="about.html" class="navDiv">
+			<div>
+				<h4 class="navText">About</h4></div>
+		</a>
+		<hr class="navHr">
+		<a href="http://www.agentowned.com/one-stop-shop.html" target="_blank" class="navDiv">
+			<div>
+				<h4 class="navText">One Stop Shop</h4></div>
+		</a>
+		<hr class="navHr">
+		<a href="/blog.html" class="navDiv">
+			<div>
+				<h4 class="navText">Blog</h4></div>
+		</a>
+		<hr class="navHr">
+		<a href="/contact.html" class="navDiv">
+			<div>
+				<h4 class="navText">Contact</h4></div>
+		</a>
+		
+		
+		
+	</nav>
+	
+	<div class="mobileNav">
+
+		<a href="/login.html">
+			<div>
+				<h4 class="navText">Login/Profile</h4></div>
+		</a>
+		<hr>
+		<a href="/property-search.html" >
+			<div>
+				<h4 class="navText">Property Search</h4></div>
+		</a>
+		<hr>
 		<a href="about.html">
 			<div>
-				<h3>About</h3></div>
+				<h4 class="navText">About</h4></div>
 		</a>
-		<a href="index.html">
+		<hr>
+		<a href="http://www.agentowned.com/one-stop-shop.html" target="_blank">
 			<div>
-				<h3>Home</h3></div>
+				<h4 class="navText">One Stop Shop</h4></div>
 		</a>
-	</nav>
+		<hr>
+		<a href="/blog.html">
+			<div>
+				<h4 class="navText">Blog</h4></div>
+		</a>
+		<hr>
+		<a href="/contact.html">
+			<div>
+				<h4 class="navText">Contact</h4></div>
+		</a>	
+	</div>
 	<content>
 		<div class="aboutSection">
 			<div class="aboutPerson">
@@ -95,9 +147,26 @@
 		<div class="footerIcons">
 			<a href=""><i class="fa fa-facebook fa-lg"></i></a>
 			<a href=""><i class="fa fa-twitter fa-lg"></i></a>
+			<a href="tel:843-670-2835"><i class="fa fa-phone fa-lg"></i><h4 class="phoneNum">843-670-2835</h4></a>
+			<a href="/contact.html"><i class="fa fa-envelope fa-lg"></i></a>
 			<a href=""><i class="fa fa-rss fa-lg"></i></a>
 		</div>
 	</footer>
+	
+	<script>
+	$(".menuLogo").click(function () {
+		
+		if ($(window).width() < 560) {
+			if ($(".mobileNav").css("display") === "none") {
+			 $(".mobileNav").css("display", "flex");
+		 	} else if ($(".mobileNav").css("display") === "flex") {
+			 $(".mobileNav").css("display", "none"); 
+		 	}		
+		}
+	});
+</script>
 </body>
+
+
 
 </html>

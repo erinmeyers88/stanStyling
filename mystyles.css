@@ -42,8 +42,9 @@ h4 {
 }
 
 p {
-	line-height: 1.5;
+	line-height: 2em;
 	margin: 0;
+	margin-bottom: 20px;
 }
 
 i {
@@ -215,7 +216,8 @@ nav div {
 	flex-direction: column;
 	align-items: center;
 	justify-content: flex-start;
-	width: 25%;
+	width: 27%;
+	text-align: justify;
 }
 
 .highlight i {
@@ -233,7 +235,7 @@ nav div {
 
 .highlightLogo {
 	height: 100px;
-	margin-top: 50px;
+	margin-top: 15px;
 	margin-bottom: 30px;
 }
 
@@ -338,7 +340,6 @@ ul li {
 
 .aboutPerson p {
 	width: 70%;
-	line-height: 30px;
 	text-indent: 30px;
 	text-align: justify;
 }
