@@ -19,15 +19,10 @@
 	</header>
 	<nav>
 		<div class="menuLogo"><i class="fa fa-bars fa-2x"></i></div>
-		
-		<a href="/property-search.html" class="navDiv">
+
+		<a href="/index.html" class="navDiv">
 			<div>
-				<h4 class="navText">Property Search</h4></div>
-		</a>
-		<hr class="navHr">
-		<a href="about.html" class="navDiv">
-			<div>
-				<h4 class="navText">About</h4></div>
+				<h4 class="navText">Home</h4></div>
 		</a>
 		<hr class="navHr">
 		<a href="http://www.agentowned.com/one-stop-shop.html" target="_blank" class="navDiv">
@@ -35,6 +30,23 @@
 				<h4 class="navText">One Stop Shop</h4></div>
 		</a>
 		<hr class="navHr">
+			<div class="propertySearchMenuDiv">
+				<a><h4 class="propertySearchHover">Property Search</h4></a>
+				<div class="propertySearchNav">
+					<a href="/featured-listings.html"><h4>Featured Properties</h4></a>
+					<hr>
+					<a><h4>Quick Categories</h4></a>
+					<hr>
+					<a href="/property-search.html"><h4>Detailed Search</h4></a>
+				</div>
+			</div>
+		<hr class="navHr">
+		<a href="about.html" class="navDiv">
+			<div>
+				<h4 class="navText">About</h4></div>
+		</a>
+		<hr class="navHr">
+
 		<a href="/blog.html" class="navDiv">
 			<div>
 				<h4 class="navText">Blog</h4></div>
@@ -44,11 +56,10 @@
 			<div>
 				<h4 class="navText">Contact</h4></div>
 		</a>
-		
-		
-		
 	</nav>
-	
+
+
+
 	<div class="mobileNav">
 
 		<a href="/login.html">
@@ -56,7 +67,7 @@
 				<h4 class="navText">Login/Profile</h4></div>
 		</a>
 		<hr>
-		<a href="/property-search.html" >
+		<a href="/property-search.html">
 			<div>
 				<h4 class="navText">Property Search</h4></div>
 		</a>
@@ -79,9 +90,9 @@
 		<a href="/contact.html">
 			<div>
 				<h4 class="navText">Contact</h4></div>
-		</a>	
+		</a>
 	</div>
-	
+
 	<content>
 		<div class="homeTop">
 			<!--<img src="palms-park.jpg">-->
@@ -95,27 +106,33 @@
 
 		</div>
 		<div class="homeMiddle">
-			
-			
+
+
 			<div class="highlight">
 				<i class="fa fa-check fa-3x"></i>
 				<h2>Experience</h2>
 				<div class="pStandard">
-					<p>Lorem ipsum dolor sit amet, nec feugiat volutpat mollis sed aut, ipsum eget fusce hac, eget dictum ut. Tempor morbi,
-						sit eu vestibulum curae culpa sapien mollis.</p>
+					<p>With over 20 years of industry experience, and a proven track record, team Huff is ready to guide you through the process
+						of buying or selling your home. Learn more about why team Huff is the best choice for your real estate needs in the
+						Charleston area.</p>
 				</div>
-				<a class="highlightLogo"><img src="agentOwnedLogo.png" alt=""></a>
+				<a class="highlightLogo">
+					<div class="quickSearchButton">
+						<h4>Learn More</h4></div>
+				</a>
 			</div>
 			<hr>
 			<div class="highlight">
 				<i class="fa fa-shopping-cart fa-3x"></i>
 				<h2>One Stop Shop</h2>
 				<div class="pStandard">
-					<p>Stan Huff is part of the AgentOwned Realty family, which means you will have one stop access to all of the services needed to close your real estate transaction, such as mortgage, title insurance, property & casualty insurance, and home warranty services.</p>
+					<p>Stan Huff is part of the AgentOwned Realty family, which means you will have one stop access to all of the services
+						needed to close your real estate transaction, such as mortgage, title insurance, property & casualty insurance, and
+						home warranty services.</p>
 					<p>Learn more:</p>
 				</div>
-				
-				<a class="highlightLogo" href="http://www.agentowned.com/one-stop-shop.html"><img src="agentOwnedLogo.png" alt="" ></a>
+
+				<a class="highlightLogo" href="http://www.agentowned.com/one-stop-shop.html" target="_blank"><img src="agentOwnedLogo.png" alt=""></a>
 			</div>
 			<hr>
 			<div class="highlight">
@@ -130,7 +147,7 @@
 						<h4>Search Now</h4></div>
 				</a>
 			</div>
-			
+
 		</div>
 
 
@@ -145,7 +162,7 @@
 		</div>
 	</footer>
 	<script>
-	$(".menuLogo").click(function () {
+		$(".menuLogo").click(function () {
 		
 		if ($(window).width() < 560) {
 			if ($(".mobileNav").css("display") === "none") {
@@ -155,7 +172,36 @@
 		 	}		
 		}
 	});
-</script>
+		$(".propertySearchHover").mouseenter(function () {
+			$(".propertySearchNav").css("z-index", "10");
+		});
+		
+		$(".propertySearchHover").mouseleave(function () {
+			$(".propertySearchNav").css("z-index", "-1");
+		});
+		
+		$(".propertySearchHover").click(function () {
+			if ($(".propertySearchNav").css("z-index") === "10") {
+				$(".propertySearchNav").css("z-index", "-1");
+			} else {
+				$(".propertySearchNav").css("z-index", "10");
+			}
+		});
+		
+		$(".propertySearchHover").mouseleave(function () {
+			$(".propertySearchNav").css("z-index", "-1");
+		});
+		
+		
+		$(".propertySearchNav").mouseenter(function () {
+			$(".propertySearchNav").css("z-index", "10");
+		});
+		
+		$(".propertySearchNav").mouseleave(function () {
+			$(".propertySearchNav").css("z-index", "-1");
+		});
+	
+	</script>
 </body>
 
 
