@@ -294,18 +294,31 @@ footer {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	width: 85%;
+	width: 75%;
+	/*border-left: 10px solid #445928;
+	border-bottom: 10px solid #445928;
+	border-top: 2px solid #445928;
+	border-right: 2px solid #445928;
+	border-radius: 10px;*/
+}
+
+.aboutDivide {
+	display: none;
+	width: 90%;
+	margin-top: 70px;
+	margin-bottom: 70px;
 }
 
 .aboutPerson hr {
-	width: 85%;
+	width: 75%;
 	margin-top: 30px;
 	margin-bottom: 30px;
+	/*border-color: #445928;*/
 }
 
 .nameAndAwards {
 	width: 60%;
-	height: 100%;
+	margin-left: 20px;
 }
 .nameAndAwards ul {
 	padding-left: 1em;
@@ -319,14 +332,13 @@ ul li {
 }
 
 .headshot {
-	height: 200px;
+	height: 203px;
 	width: 165px;
 }
 
 .aboutPerson p {
 	width: 70%;
 	line-height: 30px;
-	margin-bottom: 20px;
 	text-indent: 30px;
 	text-align: justify;
 }
@@ -336,12 +348,12 @@ ul li {
 	flex-direction: row;
 	justify-content: space-between;
 	width: 65%;
+	margin-top: 40px;
+	margin-bottom: 40px;
 }
 
 .personalPics img {
 	height: 150px;
-	margin-bottom: 30px;
-	
 }
 
 /*Media queries*/
@@ -352,6 +364,20 @@ ul li {
 		display: none !important;
 	}
 }
+
+@media (max-width: 1245px) {
+	.personalPics {
+		width: 75%;
+	}
+}
+
+
+@media (max-width: 1180px) {
+	.aboutPersonTop {
+		font-size: 14px;
+	}
+}
+
 
 @media (max-width: 954px) {
 	
@@ -377,6 +403,20 @@ ul li {
 		margin-bottom: 50px;
 	}
 	
+	.aboutSection {
+		flex-direction: column;
+	}
+	.aboutPerson {
+		width: 90%;
+	}
+	
+	.aboutDivide {
+		display: flex;
+	}
+	
+	.personalPics {
+    	width: 65%;
+	}
 	
 }
 
@@ -409,6 +449,10 @@ ul li {
 		width: 70%;
 	}
 	
+	.personalPics img {
+		height: 120px;
+	}
+	
 }
 
 @media (max-width: 560px) {
@@ -427,6 +471,14 @@ ul li {
 	
 	h4 {
 		font-size: 16px;
+	}
+	
+	p {
+		font-size: 14px;
+	}
+	
+	li {
+		font-size: 12px;
 	}
 	
 	.homeTop {
@@ -458,8 +510,45 @@ ul li {
 	nav hr {
 		display: none;
 	}
+	
+	.personalPics {
+   		width: 75%;
+	}
 
 }
+
+@media (max-width: 500px) {
+	.aboutPersonTop {
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.nameAndAwards {
+		margin-top: 20px;
+		width: 100%;
+	}
+	
+	li {
+		font-size: 14px;
+	}
+	
+	.personalPics {
+		height: 250px;
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.personalPics img {
+		height: 100px;
+		width: 175px;
+	}
+	
+	.headshot {
+		height: 150px;
+		width: 135px;
+	}
+		
+}	
 
 
 @media (max-width: 460px) {
