@@ -9,6 +9,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="mystyles.css">
 	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 
 <body>
@@ -31,7 +32,7 @@
 		</a>
 		<hr class="navHr">
 			<div class="propertySearchMenuDiv">
-				<a><h4 class="propertySearchHover">Property Search</h4></a>
+				<a><h4 class="propertySearchHover" onclick="">Property Search</h4></a>
 				<div class="propertySearchNav">
 					<a href="/featured-listings.html"><h4>Featured Properties</h4></a>
 					<hr>
@@ -67,10 +68,20 @@
 				<h4 class="navText">Login/Profile</h4></div>
 		</a>
 		<hr>
-		<a href="/property-search.html">
-			<div>
-				<h4 class="navText">Property Search</h4></div>
-		</a>
+		
+			<div class="mobilePropSearch">
+				<h4 class="navText">Property Search</h4>
+				<a class="mobilePropSearchButton"><i class="fa fa-plus"></i>
+				<i class="fa fa-minus"></i>
+				</a>	
+			</div>
+			<div id="mobilePropertySearchNav">
+					<a href="/featured-listings.html"><h4>Featured Properties</h4></a>
+					<hr>
+					<a><h4>Quick Categories</h4></a>
+					<hr>
+					<a href="/property-search.html"><h4>Detailed Search</h4></a>
+				</div>
 		<hr>
 		<a href="about.html">
 			<div>
@@ -162,30 +173,47 @@
 		</div>
 	</footer>
 	<script>
+		
+		
+		// Mobile Menu//
 		$(".menuLogo").click(function () {
 		
-		if ($(window).width() < 560) {
+		if ($(window).width() < 620) {
 			if ($(".mobileNav").css("display") === "none") {
 			 $(".mobileNav").css("display", "flex");
 		 	} else if ($(".mobileNav").css("display") === "flex") {
 			 $(".mobileNav").css("display", "none"); 
 		 	}		
 		}
-	});
-		$(".propertySearchHover").mouseenter(function () {
-			$(".propertySearchNav").css("z-index", "10");
 		});
 		
-		$(".propertySearchHover").mouseleave(function () {
-			$(".propertySearchNav").css("z-index", "-1");
+		
+		$(".fa-plus").click(function () {
+				$("#mobilePropertySearchNav").css("display","flex");
+				$(".fa-plus").css("display", "none");
+				$(".fa-minus").css("display", "flex");
 		});
 		
-		$(".propertySearchHover").click(function () {
+		$(".fa-minus").click(function () {
+				$("#mobilePropertySearchNav").css("display","none");
+				$(".fa-plus").css("display", "flex");
+				$(".fa-minus").css("display", "none");
+		});
+		
+		
+		//Menu Dropdown//
+
+		
+		$(".propertySearchHover").on("vclick", function () {
 			if ($(".propertySearchNav").css("z-index") === "10") {
 				$(".propertySearchNav").css("z-index", "-1");
-			} else {
+			} else if ($(".propertySearchNav").css("z-index") === "-1") {
 				$(".propertySearchNav").css("z-index", "10");
 			}
+		});
+		
+		$(".propertySearchHover").mouseenter(function () {
+			$(".propertySearchNav").css("z-index", "10");
 		});
 		
 		$(".propertySearchHover").mouseleave(function () {
@@ -200,6 +228,8 @@
 		$(".propertySearchNav").mouseleave(function () {
 			$(".propertySearchNav").css("z-index", "-1");
 		});
+		
+		
 	
 	</script>
 </body>

@@ -94,8 +94,9 @@ nav div {
 	flex-direction: column;
 	align-items: center;
 	height: 300px;
+	margin-right: 10px;
+	margin-left: 10px;
 }
-
 
 .mobileNav {
 	color: white;
@@ -138,14 +139,17 @@ nav div {
 }
 
 
-
 .propertySearchNav {
 	display: flex;
 	flex-direction: column;
 	height: auto;
 	z-index: -1;
-	padding: 15px;
 	background-color: #332859;
+	width: 100%;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-right: 0;
+	padding-left: 0;
 }
 
 
@@ -153,6 +157,46 @@ nav div {
 .propertySearchNav hr {
 	width: 100%;
 }
+
+.propertySearchHover {
+	cursor: pointer;
+}
+
+
+.mobilePropSearch {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	margin-left: 80%;
+}
+
+.mobilePropSearchButton {
+	height: 20px;
+	margin-left: 30%;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+}
+
+#mobilePropertySearchNav {
+	display: none;
+	flex-direction: column;
+	width: 95%;
+	background-color: #F28324;
+	align-items: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#mobilePropertySearchNav hr {
+	width: 100%;
+}
+
+.fa-minus {
+	display: none;
+}
+
 
 .content {
 	width: 95%;
@@ -379,7 +423,7 @@ ul li {
 /*Media queries*/
 
 
-@media (min-width: 560px) {
+@media (min-width: 620px) {
 	.mobileNav {
 		display: none !important;
 	}
@@ -473,9 +517,12 @@ ul li {
 		height: 120px;
 	}
 	
+	nav {
+		padding: 10px;
+	}
 }
 
-@media (max-width: 560px) {
+@media (max-width: 620px) {
 	
 	h1 {
 		font-size: 35px;
@@ -533,6 +580,10 @@ ul li {
 	
 	.personalPics {
    		width: 75%;
+	}
+	
+	.propertySearchMenuDiv {
+		display: none;
 	}
 
 }
