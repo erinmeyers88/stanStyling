@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>{{page_title}}</title>
+<meta name="keywords" content="{{meta_keywords}}" />
+<meta name="description" content="{{meta_description}}" />
+{{meta_tags}}
+{{favico}}
+{{shared_assets}}
+<!--[if IE 6]>
+<style type="text/css">
+	#navigation { margin-top: -28px; }
+</style>
+<![endif]-->
+<script type="text/javascript" src="/js/common.js"></script>
+</head>
+<body>
+{{link_admin}}
+<div id="centered-home">
+	<!-- Header -->
+	<div id="header">		
+		<a href="/" id="logo" title="AgentOwned - Charleston SC Real Estate Agents">
+			<img src="/img/stan-huff_logo.png" border=0 />
+		</a> 
+	</div>
+	<!-- Header -->
+	<div align="center" id="navigation">	      
+    		{{element[top_navigation_items=1]}}
+	</div>
+	<!-- Content-->
+	<div align="center">
+		{{image_rotation[images=/img/rotation/chairs-marsh.jpg|/img/rotation/palms-park.jpg|/img/rotation/chairs-marsh.jpg,width=805,height=452]}}				
+	</div>
+	<div>
+		{{content_for_layout}}
+	</div>
+</div>
+<!-- Footer -->
+<div id="footer">
+  <div class="footer-mid-home">
+    <div align="center" class="ftr-icons">
+       <a href="/blog.rss"><img alt="Subscribe to RSS feed" src="/img/rssicon.png" /></a>
+        <img title="Agent Owned" alt="Agent Owned" src="/img/agentowned-logo.png" />
+        <img title="Accredited Buyer Representative" alt="Accredited Buyer Representative" src="/img/abr-logo.png" />
+        <img title="Equal Housing Opportunity" alt="Equal Housing Opportunity" src="/img/equal_housing_oportunity.png" />
+        <img title="Realtor" alt="Realtor" src="/img/realtor-logo.png" /> <br />Powered by <a href="http://www.myrsol.com" target="_blank" title="Powered by Myrsol, LLC. Real Estate Solutions">Myrsol, LLC. Real Estate Solutions</a>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>
