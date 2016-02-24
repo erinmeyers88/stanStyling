@@ -5,20 +5,78 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	
+	<!--<link rel="stylesheet" href="bootsrap-custom-theme.min.css">-->
 	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="mystyles.css">
-	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-	<!--<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
+
 </head>
 
 <body>
+
+
+
+
+
 	<header>
-		<div class="logo">LOGO HERE</div>
+		<div class="logo">
+			
+			<img src="newLogo.png">
+			<div class="logoText">
+				<h3>Stan Huff</h3>
+				<p>The Real Estate Advisor</p>
+			</div>
+			
+		</div>
 		<a rel="external" href="/login.html" class="login">Login/Profile<i class="fa fa-user fa-lg"></i></a>
 
 	</header>
-	<nav>
+	<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="/login.html">Login/Profile<span class="sr-only">(current)</span></a></li>
+        <li><a href="index.html">Home</a></li>
+		<li><a href="http://www.agentowned.com/one-stop-shop.html" target="_blank">One Stop Shop</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Property Search<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/featured-listings.html">Featured Properties</a></li>
+            <li><a href="/quicksearch.html">Quick Categories</a></li>
+            <li><a href="/property-search.html">Detailed Search</a></li>
+          </ul>
+        </li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="/blog.html">Blog</a></li>
+		<li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+	<nav class="regularNav">
 		<div class="menuLogo"><i class="fa fa-bars fa-2x"></i></div>
 
 		<a rel="external" href="index.html" class="navDiv">
@@ -149,7 +207,8 @@
 				<i class="fa fa-search fa-3x"></i>
 				<h2>Quick Search</h2>
 				<div class="pStandard">
-					<p>Looking for a home in a certain neighborhood or area?  Interested in bank-owned or short sale properties?  Use these quick search categories to speed up your hunt and narrow down your results to what interests you most.</p>
+					<p>Looking for a home in a certain neighborhood or area? Interested in bank-owned or short sale properties? Use these quick
+						search categories to speed up your hunt and narrow down your results to what interests you most.</p>
 				</div>
 				<a class="highlightLogo" rel="external" href="/quicksearch.html">
 					<div class="quickSearchButton">
@@ -171,8 +230,6 @@
 		</div>
 	</footer>
 	<script>
-		
-		
 		// Mobile Menu//
 		$(".menuLogo").click(function () {
 		
@@ -278,8 +335,6 @@
 		// 	});
 				
 		// }
-		
-		
 	</script>
 </body>
 
